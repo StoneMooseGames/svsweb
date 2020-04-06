@@ -12,3 +12,6 @@ exports.showIndex = (req,res) => {
     res.render("index");
 };
 
+exports.showWelcome = (req,res) => {
+    res.render("welcome");
+};

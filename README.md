@@ -1,1 +1,1 @@
-# svsweb
+Server code for SpyvsSpy game
