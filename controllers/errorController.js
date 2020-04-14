@@ -12,3 +12,8 @@ exports.internalServerError = (error,req,res,next) => {
     res.status(errorCode);
     res.send(`${errorCode} | Sorry, Server is experiencing issues`);
 };
+
+exports.registrationError = (req,res) => {
+    console.log("error occured");
+    
+};

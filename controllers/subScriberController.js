@@ -1,7 +1,8 @@
 const Subscriber = require("../models/subscriber");
 
-exports.getAllSubscribers = (req,res, next) => {
-    Subscriber.find({}, (error, subscribers) => {
+
+exports.getAllSubscribers = function(req,res, next) {
+    Subscriber.find({}, function(error, subscribers)  {
         if(error) next(error);
         req.data = subscribers;
         next();
@@ -21,6 +22,6 @@ exports.saveSubscriber = (req,res) => {
         res.render("welcome");
     })
         .catch(error => {
-        res.send(error);
+        res.render("registerError");
     });
 };

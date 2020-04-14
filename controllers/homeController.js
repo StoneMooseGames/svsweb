@@ -15,3 +15,14 @@ exports.showIndex = (req,res) => {
 exports.showWelcome = (req,res) => {
     res.render("welcome");
 };
+exports.showUserInfo = (req,res) => {
+    
+     
+        if (req.session.loggedin) {
+            res.render("userinfo");        
+        } else {
+            res.render("usernotlogged");
+        }
+        res.end();
+        
+}
